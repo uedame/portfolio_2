@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/destyle.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>株式会社フリーシステムズ</title>
+</head>
+
+<body>
+	<header class="header">
+		<nav class="menu">
+			<div class="logo"><a href=""><img src="img/logo2.png" alt=""></a>
+			</div>
+			<div class="header_title">
+				<!-- <p>株式会社</p>
+				<p>フリーシステムズ</p> -->
+				<!-- <span>株式会社フリーシステムズ</span>
+				<br> -->
+				<span class="br">株式会社</span><span>フリーシステムズ</span>
+			</div>
+			<ul>
+				<li>
+					<div>
+						<a href="#product">
+							<p><span>PRODUCT</span></p>
+						</a>
+						<a href="#company">
+							<p><span>COMPANY</span></p>
+						</a>
+						<a href="#news">
+							<p><span>NEWS</span></p>
+						</a>
+						<a href="#contact">
+							<p><span>CONTACT</span></p>
+						</a>
+					</div>
+				</li>
+
+				<li><a href="https://twitter.com/" target="_blank"><img class="sns-logo" src="img/tw.png" alt=""></a></li>
+				<li><a href="https://www.facebook.com/" target="_blank"><img class="sns-logo" src="img/fb.png" alt=""></a></li>
+				<li><a href="https://www.instagram.com/" target="_blank"><img class="sns-logo" src="img/Instagram.png"
+							alt=""></a></li>
+			</ul>
+
+			<!-- <ul>
+				<li><a href="#"><span>PRODUCT</span></a></li>
+				<li><a href=""><span>COMPANY</span></a></li>
+				<li><a href=""><span>NEWS</span></a></li>
+				<li><a href=""><span>CONTACT</span></a></li>
+				<li><a href="https://twitter.com/" target="_blank"><img class="sns-logo" src="img/tw.png" alt=""></a></li>
+				<li><a href="https://www.facebook.com/" target="_blank"><img class="sns-logo" src="img/fb.png" alt=""></a></li>
+				<li><a href="https://www.instagram.com/" target="_blank"><img class="sns-logo" src="img/Instagram.png"
+							alt=""></a></li>
+			</ul> -->
+			<div class="toggle_btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</nav>
+		<div class="slide"></div>
+		<div class="mask"></div>
+	</header>
+	<main id="top">
+		<div class="dummy"></div>
+		<hero>
+			<div class="hero">
+				<img src="img/4.jpg" alt="">
+				<p class="hero_title">WELCOM</p>
+			</div>
+		</hero>
+
+		<section>
+			<h2 id="product" class="section_title">PRODUCT</h2>
+			<div class="product_style">
+				<div class="product scale">
+					<img src="img/7.JPG" alt="">
+					<p class="product-title">タイトル1</p>
+				</div>
+				<div class="product zoom">
+					<img src="img/works2.jpg" alt="">
+					<p class="product-title">タイトル2</p>
+				</div>
+				<div class="product scale">
+					<p class="product-new">new</p>
+					<img src="img/works1.jpg" alt="">
+					<p class="product-title">タイトル3</p>
+				</div>
+				<div class="product scale">
+					<img src="img/works1.jpg" alt="">
+					<p class="product-title">タイトル4</p>
+				</div>
+				<div class="product scale">
+					<img src="img/6.JPG" alt="">
+					<p class="product-title">タイトル5</p>
+				</div>
+				<div class="product scale">
+					<video src="./movie/マイビデオ5.mp4" autoplay loop muted></video>
+					<div class="video_mask"></div>
+
+					<p class="product-title">タイトル6</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2 id="company" class="section_title">COMPANY</h2>
+			<table class="company">
+				<tr>
+					<td class="td_left">会社名</td>
+					<td><span>株式会社 フリーシステムズ</span></td>
+				</tr>
+				<tr>
+					<td class="td_left">従業員数</td>
+					<td><span>100名</span></td>
+				</tr>
+				<tr>
+					<td class="td_left">会社電話番号</td>
+					<td><span>03-1234-5678</span></td>
+				</tr>
+				<tr>
+					<td class="td_left">住所</td>
+					<td><span>Tokyo Shinjuku</span></td>
+				</tr>
+			</table>
+		</section>
+
+		<section>
+			<h2 id="news" class="section_title">NEWS</h2>
+			<div class="news">
+				<p>1983 設立</p>
+				<p>2000 社員100名達成</p>
+				<p>2020 東京五輪アンバサダー</p>
+			</div>
+		</section>
+
+		<section>
+			<h2 id="contact" class="section_title">CONTACT</h2>
+			<form action="mailto:hoge@hogehoge.com" enctype="text/plain" method="POST">
+				<div class="contact">
+					[お問い合わせ]<br /><br />
+					会社名<br />
+					<input class="contact_text" name="company" type="text" value="" /><br />
+					氏名<br />
+					<input class="contact_text" name="name" type="text" value="" /><br />
+					メールアドレス<br />
+					<input class="contact_text" name="mail" type="address"><br />
+					お問い合わせ内容<br />
+					<textarea class="contact_text" name="question"></textarea><br />
+					<div>
+						<input class="btn" type="submit" value="送信" />
+					</div>
+				</div>
+			</form>
+		</section>
+
+		<button class="question_btn" type="button" value=""><a href="#contact"><span>お問い合わせ<br>はこちら</span></a></button>
+		<button class="top_btn" type="button" value=""><a href="#top">TOPへ</a></button>
+
+	</main>
+	<footer>
+		<div class="social">
+			<a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+			<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+		</div>
+
+		<p class="end">株式会社 フリーシステムズ © 2023 bb_sekai</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+
+</html>

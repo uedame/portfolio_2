@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+* {
+	font-family: 'Merriweather', serif;
+	/* これ使うと、リンク先へスムーズにジャンプする */
+	scroll-behavior: smooth;
+}
+
+img {
+	width: 100%;
+	/* 画像と動画のheightはアスペクト比を揃えて置かないとずれるよ*/
+	object-fit: cover;
+}
+
+video {
+	object-fit: cover;
+	/* 画像と動画のheightはアスペクト比を揃えて置かないとずれるよ*/
+	width: 100%;
+	top: 0;
+	left: 0;
+	/* 画像や動画に意図しない余白ができた場合はこいつで消せ*/
+	vertical-align: bottom;
+}
+
+.video_mask {
+	width: 100%;
+	height: 40%;
+	background-color: #c71d9f;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* mix-blend-modeを設定するとちょっとかっこよくなる */
+	mix-blend-mode: overlay;
+}
+
+/* ページスクロール設定 */
+#product,
+#company,
+#news,
+#contact {
+	/* スクロール時のズレを解消 */
+	scroll-margin-top: 80px;
+}
+
+/* header */
+
+.header {
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	z-index: 5;
+}
+
+.header_title {
+	color: #fff;
+	font-size: 2.4rem;
+	margin: 0 auto 0 10px;
+	font-weight: bold;
+}
+
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	background: #000000;
+	align-items: center;
+	transition: all .6s;
+}
+
+.menu .logo {
+	width: 60px;
+	height: 60px;
+	margin-left: 20px;
+}
+
+.menu ul {
+	display: flex;
+	color: #fff;
+	align-items: center;
+}
+
+.menu ul li {
+	margin-right: 30px;
+	align-items: center;
+}
+
+.menu ul li div {
+	display: flex;
+	width: 220px;
+	height: 60px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.menu ul li:hover {
+	cursor: pointer;
+}
+
+.menu ul li a p {
+	/* display: inline-block; */
+	width: 90px;
+	transition: all .2s;
+	margin-left: 20px;
+}
+
+.menu ul li p span:hover {
+	color: orange;
+	border-bottom: 1px solid orange;
+}
+
+.sns-logo {
+	width: 30px;
+	transition: all .2s;
+}
+
+.sns-logo:hover {
+	border: none;
+	scale: 1.2;
+}
+
+
+.toggle_btn {
+	display: none;
+}
+
+/* main */
+
+.dummy {
+	height: 80px;
+	width: 100%;
+}
+
+.hero_title {
+	font-size: 4rem;
+	color: #24fc10;
+	font-weight: bold;
+}
+
+.hero {
+	position: relative;
+}
+
+.hero_title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.section_title {
+	text-align: center;
+	font-size: 3.2rem;
+	margin: 30px 0;
+	font-weight: 700;
+}
+
+/* PRODUCT */
+
+.product_style {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	/* margin: 0 2%; */
+}
+
+.product {
+	width: 32%;
+	border: 1px solid #333;
+	left: 1%;
+	margin: 0 1% 1% 0;
+	position: relative;
+	/* はみ出た部分を非表示にします。 */
+	overflow: hidden;
+}
+
+.product-new {
+	position: absolute;
+	color: #0f38f0;
+	padding: 2px 16px;
+	background: #24fc10;
+	font-size: 1rem;
+}
+
+.scale:hover {
+	scale: 1.05;
+	transition: all 0.3s;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.zoom img:hover {
+	scale: 1.03;
+	transition: all 0.3s;
+	/* opacity: 0.5; */
+	cursor: pointer;
+}
+
+.product-title {
+	text-align: center;
+	margin: 10px 0;
+}
+
+/* COMPANY */
+
+.company {
+	margin: 0 20px;
+	width: 96%;
+	justify-content: center;
+	border: 2px solid #000;
+}
+
+.company tr {
+	font-size: 1.4rem;
+	/* margin: 20px; */
+}
+
+td {
+	font-size: 1.4rem;
+	padding: 20px 40px 20px 20px;
+}
+
+.td_left {
+	color: #fff;
+	background-color: #767b7b;
+	width: 200px;
+}
+
+td span {
+	border-bottom: 1px solid #000;
+}
+
+/* NEWS */
+.news {
+	border: 1px solid #000;
+	background-color: #0fd2e02c;
+	margin: 0 20px;
+}
+
+.news p {
+	font-size: 1rem;
+	border-bottom: 1px solid;
+	margin: 20px;
+}
+
+/* CONTACT */
+.contact {
+	padding: 20px;
+	margin: 3%;
+	border: 2px solid #807e7e;
+}
+
+.contact_text {
+	margin-bottom: 10px;
+	color: #000;
+	width: 100%;
+	border: 2px solid #c2bebe;
+}
+
+.btn {
+	padding: 10px 40px;
+	color: #fff;
+	background-color: #222222;
+	border-radius: 8px;
+	transition: all 0.3s;
+
+}
+
+.contact div {
+	text-align: center;
+}
+
+.btn:hover {
+	opacity: 0.6;
+}
+
+/* button */
+
+.question_btn {
+	opacity: 0;
+	/* スクロールしたら表示されるように最初は透明にしている */
+	width: 120px;
+	height: 120px;
+	background-color: #de6b55;
+	border-radius: 50%;
+	color: #fff;
+	/* ボタンで上下左右を中央に作りたいならdisplay:flex: をいれろ; */
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	right: 5%;
+	bottom: 7%;
+	z-index: 6;
+	transition: all .4s;
+}
+
+.question_btn:hover {
+	color: #00f4dc;
+	font-size: 1.1rem;
+}
+
+.top_btn {
+	opacity: 0;
+	width: 60px;
+	height: 60px;
+	background-color: #888888;
+	border-radius: 50%;
+	color: #fff;
+	/* ボタンで上下左右を中央に作りたいならdisplay:flex: をいれろ; */
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	right: 1%;
+	bottom: 1%;
+	z-index: 7;
+	transition: all .4s;
+}
+
+.top_btn:hover {
+	color: #00f4dc;
+	font-size: 1.1rem;
+}
+
+.disp {
+	opacity: 1;
+}
+
+/* footer */
+
+footer {
+	margin-top: 60px;
+	font-size: 1.0rem;
+	color: #fff;
+	height: 120px;
+	/* line-height: 80px; */
+	background: #000;
+	text-align: center;
+	/* position: relative; */
+	align-items: center;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.social {
+	display: flex;
+}
+
+.social a {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #00f4dc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	margin: 22px 10px;
+	transition: all .3s;
+}
+
+
+.social a:hover {
+	transform: scale(1.2);
+}
+
+.end {
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width:1000px) {
+
+	.header_title {
+		font-size: 1.4rem;
+		line-height: 2rem;
+	}
+
+	.br::after {
+		font-size: 1.2rem;
+		/* spanタグで改行する時に使用する */
+		content: "\A";
+		white-space: pre;
+	}
+}
+
+@media screen and (max-width:700px) {
+
+	/* toggleボタン */
+
+	.open .mask {
+		background-color: #343533;
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		opacity: 0.7;
+	}
+
+	.slide {
+		background-color: #3d3d0a;
+		z-index: 2;
+		position: fixed;
+		top: 80px;
+		width: 40%;
+		height: 200%;
+		left: -400px;
+		transition: all .8s;
+		display: block;
+	}
+
+	.open .slide {
+		left: 0px;
+	}
+
+	.toggle_btn {
+		background-color: #fff;
+		position: relative;
+		margin-right: 30px;
+		width: 34px;
+		height: 34px;
+		cursor: pointer;
+		display: block;
+	}
+
+	.toggle_btn span {
+		position: absolute;
+		display: block;
+		left: 4px;
+		width: 24px;
+		height: 3px;
+		background-color: #333;
+		border-radius: 4px;
+	}
+
+	.toggle_btn span:nth-child(1) {
+		top: 6px;
+	}
+
+	.toggle_btn span:nth-child(2) {
+		top: 16px;
+	}
+
+	.toggle_btn span:nth-child(3) {
+		bottom: 6px;
+	}
+
+
+	.menu .toggle_btn span {
+		transition: all .6s;
+
+	}
+
+	.open .toggle_btn span {
+		top: 0px;
+		left: 0;
+		width: 100%;
+	}
+
+	.open .toggle_btn span:nth-child(1) {
+		transform: translateY(16px) rotate(315deg);
+	}
+
+	.open .toggle_btn span:nth-child(2) {
+		display: none;
+	}
+
+	.open .toggle_btn span:nth-child(3) {
+		top: 32px;
+		transform: translateY(-16px) rotate(-315deg);
+	}
+
+	.menu ul {
+		display: block;
+		font-size: 2rem;
+		z-index: 5;
+		position: fixed;
+		top: 20%;
+		left: -400px;
+		transition: all .8s;
+	}
+
+	.open .menu ul {
+		left: 10%;
+	}
+
+	.menu ul li:first-child {
+		/* スライド時、twitterマークとの距離 */
+		margin-bottom: 200px;
+	}
+
+	.menu ul li {
+		margin-bottom: 36px;
+	}
+
+	.open .menu ul {
+		font-size: 1.2rem;
+	}
+
+	.menu ul li a p {
+		display: block;
+		margin-bottom: 28px;
+		margin-left: 0px;
+	}
+
+	.menu ul li div {
+		/* display: inline; */
+		/* margin: 30px 0; */
+		width: 0;
+		height: 0;
+		flex-wrap: wrap;
+		/* align-items: center; */
+	}
+
+	.product {
+		width: 47%;
+		left: 2%;
+
+		border: 1px solid #333;
+		margin: 0 2% 2% 0;
+		/* margin-bottom: 40px; */
+		position: relative;
+	}
+
+	.product:hover {
+		scale: 1;
+	}
+
+	.company tr td {
+		font-size: 1rem;
+	}
+
+}
